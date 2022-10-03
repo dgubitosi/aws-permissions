@@ -5,17 +5,17 @@ import json
 with open("iam_definition.json") as f:
     definition = json.load(f)
 
+    arns = ''
+    permissions = ''
     for serv in definition:
         service = serv['prefix']
 
         # arns
-        arns = ''
         for res in serv['resources']:
             arn = res['arn']
             arns += f'{service} => {arn}\n'
 
         # permissions
-        permissions = ''
         for priv in serv['privileges']:
             action = priv['privilege']
             desc = priv['description']
