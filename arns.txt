@@ -1,0 +1,2 @@
+xray => arn:${Partition}:xray:${Region}:${Account}:group/${GroupName}/${Id}
+xray => arn:${Partition}:xray:${Region}:${Account}:sampling-rule/${SamplingRuleName}
